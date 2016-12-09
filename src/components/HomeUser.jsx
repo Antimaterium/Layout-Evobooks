@@ -12,7 +12,7 @@ class HomeUser extends Component{
         }
 		return (
           <div> 
-			 <h2 className="categorias">Minha biblioteca</h2>
+			 <h2 className="categorias">Xaplaustos</h2>
              <PaperBackground/>
 		</div> 	
 		);          

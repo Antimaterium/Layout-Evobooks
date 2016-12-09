@@ -1,0 +1,154 @@
+[
+    {
+        "id": 1,
+        "url_3d": "http://meu3dloko.com/sdadkljaslkjhl213jhl4jl12",
+        "name": "Meu 3D loko",
+        "tags": [
+            {
+                "id": 1,
+                "nome": "Tag1"
+            },
+            {
+                "id": 2,
+                "nome": "Tag2"
+            },
+            {
+                "id": 3,
+                "nome": "Tag3"
+            }
+        ],
+        "animacoes": [
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            }
+        ],
+        "camadas": [
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "url_3d": "http://meu3dloko.com/sdadkljaslkjhl213jhl4jl12",
+        "name": "Meu 3D loko De maisndiashndkhsa",
+        "tags": [
+            {
+                "id": 1,
+                "nome": "Tag1"
+            },
+            {
+                "id": 3,
+                "nome": "Tag3"
+            }
+        ],
+        "animacoes": [
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao1",
+                "continua": true
+            },
+            {
+                "id": 4314132,
+                "habilitado": true,
+                "nome": "animacao2",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao3",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao4",
+                "continua": true
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "animacao5",
+                "continua": true
+            }
+        ],
+        "camadas": [
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            },
+            {
+                "id": 213213413,
+                "habilitado": true,
+                "nome": "camada1"
+            }
+        ]
+    }
+]

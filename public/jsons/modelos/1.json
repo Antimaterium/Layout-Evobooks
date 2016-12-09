@@ -1,0 +1,41 @@
+{
+    "id": 1,
+    "url_3d": "e2446da0e87246b19dfe2f3efdd45b73",
+    "nome": "Meu 3D loko",
+    "tags": [
+        {
+            "id": 1,
+            "nome": "Tag1"
+        },
+        {
+            "id": 2,
+            "nome": "Tag2"
+        },
+        {
+            "id": 3,
+            "nome": "Tag3"
+        }
+    ],
+    "camadas": [
+        {
+            "id": "1",
+            "habilitado": true,
+            "nome": "Bronquiolos"
+        },
+        {
+            "id": "2",
+            "habilitado": true,
+            "nome": "Alveolo Esquerdo"
+        },
+        {
+            "id": "3",
+            "habilitado": true,
+            "nome": "Alveolo Direito"
+        },
+        {
+            "id": "4",
+            "habilitado": true,
+            "nome": "Arteriolas"
+        }
+    ]
+}

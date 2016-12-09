@@ -1,45 +1,28 @@
 import React, { Component, PropTypes } from 'react';
 import { List, ListItem  } from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
-
+import Checkbox from 'material-ui/Checkbox';
 import ItemLista from './ItemLista';
 import { request } from '../utils/Request';
 import '../css/Lista.css';
 
 class Lista extends Component {
-
-	state = {
-		objects: [],
-		animations: []
+	onClick(camada){
+		this.props.onChangeHandle(camada);
 	}
-
-	componentDidMount() {
-		this.listarCamadas()
-	}
-
-	listarCamadas() {
-		var header = {
-			"Authorization": "Bearer " + localStorage.getItem("token"),
-		}
-		// var data={
-		// 	"":"",
-		// }
-
-		request("POST", "File/Objects?FileID=8cb47cd8-6ffd-4fe3-b813-2b7bdae87a4e", header)
-			.then(response => response.json())
-			.then(response => {
-				this.setState({
-					objects: response
-				});
-			});
-	}
-
 	render() {
 		return (
 			<div>
 				<List>
-					{ this.state.objects.map(object => {
-						return <ListItem primaryText={object.Name}/>
+					{ this.props.data.map(camada => {
+
+
+						return 
+						 <ListItem onClick={this.onClick.bind(this,camada)
+          				leftCheckbox={<Checkbox checked={camada.habilitado}/>}
+          				primaryText={camada.nome}
+          
+        				/>
 						}) 
 					}
 				</List>	  

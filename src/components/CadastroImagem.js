@@ -6,6 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {request} from '../utils/Request';
+import {browserHistory} from 'react-router';
 
 const styles = {
     paper: {
@@ -43,26 +44,40 @@ var header = {
 
 
 var formData = new FormData();
+console.log(this.state.value);
 
 formData.append('filename', this.refs.image.state.image.name);
 formData.append('description', this.state.description);
 formData.append('tags', this.state.tags);
-formData.append('categoryId', '06b94ae4-3b63-448c-b27c-ee2a45e9491b');
+formData.append('categoryId', this.state.value);
 formData.append('file', this.refs.image.state.image);
 
+console.log(formData);
   var xhr = new XMLHttpRequest();
 
 
+ xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        if(xhr.status == 200){
+            alert("A imagem foi cadastrada na sua biblioteca!");
+               browserHistory.push('/home');
+        }
+        else{
+            console.log(xhr);
+            alert("Houve um erro durante o cadastro da imagem - Seu arquivo FBX deve estar no formato ASCII e deve ser válido");
+            
+        }
+    }
+}
+ xhr.open('POST', 'http://localhost:63367/File/Novo'); 
 
- //xhr.open('POST', 'http://localhost:63367/File/Novo'); erro de merge
-
- xhr.open('POST', 'File/Novo');
+ //xhr.open('POST', 'File/Novo');
  console.log('c');
 
  xhr.setRequestHeader('Authorization',`Bearer ${localStorage.getItem('token')}`);
 
  xhr.send(formData);
-
+   
 // request("POST","File/Novo", header, formData)
 //     .then(response => response.json())
 //     .then(response => {
@@ -84,8 +99,6 @@ formData.append('file', this.refs.image.state.image);
      var header = {"Content-Type":"application/json"};
         var body = {};
 
-       
-console.log("ZsADSASDASDAS");
 
     request("File/Categories","Get", header, body)
       .then(response => 
@@ -95,7 +108,7 @@ console.log("ZsADSASDASDAS");
         var arr = response.map((x,i, a)=> {
             return <MenuItem value={x.Id} key={i} primaryText={x.Name} /> 
         });
-        console.log("PAssou");
+        console.log("Passou");
         console.log(arr);
          this.setState({categories: arr});
         //console.log(categories);
@@ -106,7 +119,10 @@ console.log("ZsADSASDASDAS");
       });
 }
 
-
+handleChange = (event, index, value) => {
+    this.setState({value});
+    console.log(this.state.value);
+  };
  render() {
 
     
@@ -139,13 +155,27 @@ console.log("ZsADSASDASDAS");
                             hintText="Digite uma Descrição"
                             floatingLabelText="Descrição"
                         /><br />
-                         <SelectField
-                          value={this.state.value}
-                            onChange={e => this.setState({category: e.target.value})}
-                           maxHeight={500}
-                              >
-                           {this.state.categories}
-                          </SelectField><br/>
+                         
+                         
+                        <SelectField
+                            floatingLabelText="Categoria"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                            maxHeight={200}
+                            >
+                            {this.state.categories}
+                        </SelectField>
+                        <br />
+
+                            <TextField
+                            onChange={e => this.setState({tags: e.target.value})}
+                            name="tags"
+                            style={{width: '30%'}}
+                            hintText="Digite tags (Ex:tag1,tag2)"
+                            floatingLabelText="Tags"
+                        />
+                        <br />
+                        
                         <div style={styles.buttons}>
                         <RaisedButton 
                             label="Salvar" 

@@ -22,7 +22,7 @@ ReactDOM.render(
       <Route path="imageRegister" component={CadastroImagem}/>
       <Route path="search" component={Pesquisa}/>
       <Route path="libs" component={Bibliotecas}/>
-      <Route path="edit" component={Editor}/>
+      <Route path="edit/:id" component={Editor}/>
       <Route path="profile" component={Profile}/>
       <Route path="Tabs" component={TabsProfile}/>
       <Route path="Home" component={HomeUser}/>

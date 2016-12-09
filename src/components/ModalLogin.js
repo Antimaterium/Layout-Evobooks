@@ -76,7 +76,12 @@ class ModalLogin extends React.Component {
 
 
   }
-
+  novaImagem = () =>{
+      browserHistory.push('/imageRegister');
+  }
+  home = () =>{
+      browserHistory.push('/home');
+  }
   Logout = () => {
 
     localStorage.setItem('token', '');
@@ -113,12 +118,23 @@ class ModalLogin extends React.Component {
             style={styles.button}
             disabled='true'
             />
+            <FlatButton
+            label="Home"
+            labelPosition="before"
+            style={styles.button}
+            onTouchTap={this.home}/> 
+            <FlatButton
+             label="Cadastrar nova imagem"
+            labelPosition="before"
+            style={styles.button}
+            onTouchTap={this.novaImagem}/> 
           <FlatButton
             icon={<PersonIcon />} label="Logout"
             labelPosition="before"
             style={styles.button}
             onTouchTap={this.Logout}
             />
+            
         </div>
       );
     }

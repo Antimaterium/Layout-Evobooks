@@ -1,6 +1,6 @@
 import React from 'react';
 import {GridList} from 'material-ui/GridList';
-
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -21,6 +21,7 @@ const styles = {
 };
 
 const GridListCategoria = ({modelos}) => (
+
   <div style={styles.root}>
     <GridList
       padding={10}
@@ -40,7 +41,11 @@ const GridListCategoria = ({modelos}) => (
               {modelo.Descricao}
             </CardText>
             <CardActions>
-              <FlatButton label="Editar" />
+              <FlatButton label="Visualizar" 
+              onTouchTap={function(){
+                browserHistory.push("/edit/1");
+              }}
+              />
             </CardActions>
         </Card>
       ))}
