@@ -55,6 +55,7 @@ class Editor extends Component {
 	}
 	onCamadaChange(camada){
 
+
 		camada.habilitado = !camada.habilitado
 
 		var url_3d = GetUrl3d( this.state.modelo.camadas);
@@ -95,7 +96,13 @@ class Editor extends Component {
 								<h3> Tags :</h3>
 								<Chips />
 							</Col>
+<<<<<<< HEAD
 							
+=======
+							<Col md={4} >
+								<ListaAnimacoes data={this.state.modelo.animacoes} titulo="Animações" />
+							</Col>
+>>>>>>> e7b1f6abd550c7adcc66684a623fbf0a598e61be
 						</Row>
 
 						<Row className="footerEditor">
